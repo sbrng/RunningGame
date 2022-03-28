@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     private Vector2 playerDirection;
     public Animator animator;
 
+    public int gemas = 0;
+
     public bool jump = false;
     public bool crouch = false;
 
@@ -49,6 +51,14 @@ public class Player : MonoBehaviour
             crouch = false;
             animator.SetBool("isCrouching", false);
         }
+    }
+
+    public int getGemas() {
+        return this.gemas;
+    }
+
+    public void incrementGema() {
+        this.gemas++;
     }
 
 }

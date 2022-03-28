@@ -15,11 +15,13 @@ public class Enemy : MonoBehaviour
         if(collision.tag == "Player")
         {
             Restart();
+            Debug.Log("collision");
         }
     }
 
     public void Restart()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene("GameOver");
     }
 }
